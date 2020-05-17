@@ -23,7 +23,7 @@ object_key = 'cousins.jpg'
 
 #Creating S3 bucket
 response = client.create_bucket(
-    ACL='public-read',
+    ACL='private',
     Bucket='{}'.format(bucketName),
     CreateBucketConfiguration={'LocationConstraint': 'us-west-1'},
     )
@@ -36,7 +36,7 @@ print('Uploading some data to {} with key: {}'.format(bucketName, object_key))
 
 #Uploading file to S3 bucket
 response = client.put_object(
-    ACL='private',
+    ACL='public-read',
     Body=data,
     Bucket=bucketName,
     Key=object_key
