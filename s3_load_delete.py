@@ -1,8 +1,6 @@
 import boto3
 import os
 import sys
-#import pandas as pd
-#import matplotlib.pyplot as plt
 import datetime
 
 #Creating timestamp string to name bucket
@@ -64,9 +62,9 @@ obj = bucket.Object(object_key)
 #Show contents of bucket and object
 print('Bucket name: {}'.format(bucket.name))
 print('Object key: {}'.format(obj.key))
-print('Object content length: {}'.format(obj.content_length))
-print('Object body: {}'.format(obj.get()['Body'].read()))
-print('Object last modified: {}'.format(obj.last_modified))
+#print('Object content length: {}'.format(obj.content_length))
+#print('Object body: {}'.format(obj.get()['Body'].read()))
+#print('Object last modified: {}'.format(obj.last_modified))
 
 #Deleting the objects in the bucket
 print('\nDeleting all objects in bucket {}.'.format(bucketName))
